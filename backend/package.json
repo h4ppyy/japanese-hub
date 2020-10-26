@@ -5,17 +5,21 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server-koa": "^2.18.2",
-    "graphql": "^15.3.0"
+    "graphql": "^15.3.0",
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
   },
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "babel-node src/server.js",
+    "dev": "nodemon --watch src/ --exec babel-node src/server.js",
     "build": "babel src -d dist"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/node": "^7.12.1",
-    "@babel/preset-env": "^7.12.1"
+    "@babel/preset-env": "^7.12.1",
+    "nodemon": "^2.0.6"
   }
 }
