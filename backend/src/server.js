@@ -6,7 +6,6 @@ import { Sequelize, DataTypes } from 'sequelize'
 const sequelize = new Sequelize('postgres://admin:password@localhost:5432/japanesehub')
 
 const Account = sequelize.define('account', {
-  // Model attributes are defined here
   id: { type: DataTypes.INTEGER, allowNull: false, primaryKey: true, autoIncrement: true },
   account: { type: DataTypes.STRING, allowNull: false, unique: 'compositeIndex' },
   msg: { type: DataTypes.STRING, allowNull: true },
@@ -70,15 +69,15 @@ const typeDefs = gql`
  
 const resolvers = {
   Query: {
-    hello: () => 'Hello world!',
+    hello: () => { 
+      return 'Hello world!'
+    },
     getAccountList: async () => {
       const result = await Account.findAll({ raw : true })
-      console.log('result => ', result)
       return result
     },
     getAccount: async (root, { id }) => {
       const result = await Account.findOne({ where: { id: id }, raw : true })
-      console.log('result => ', result)
       return result
     }
   },
