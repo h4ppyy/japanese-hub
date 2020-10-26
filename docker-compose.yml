@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   postgres:
-    container_name: postgres
+    container_name: jhub-postgres
     image: postgres:13
     ports:
       - "5432:5432"
@@ -9,9 +9,11 @@ services:
       POSTGRES_DB: japanesehub
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
+    volumes:
+      - ./table.sql:/docker-entrypoint-initdb.d/init.sql
   pgadmin:
     image: dpage/pgadmin4:4.27
-    container_name: pgadmin
+    container_name: jhub-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
       PGADMIN_DEFAULT_PASSWORD: password
