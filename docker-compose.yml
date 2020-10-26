@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: japanesehub
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+  pgadmin:
+    image: dpage/pgadmin4:4.27
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "5555:80"

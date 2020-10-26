@@ -1,0 +1,12 @@
+전체 테이블 조회
+SELECT * FROM pg_catalog.pg_tables;
+
+타임존 UTC to JST
+SET TIMEZONE='Asia/Tokyo';
+
+타임존 UTC to KST
+SET TIMEZONE='Asia/Seoul';
+
+mysql이랑 다르게 int auto_increment 의 경우 아래와 같이 선언
+mysql -> id INT PRIMARY KEY AUTO_INCREMENT
+postgre -> id serial PRIMARY KEY
