@@ -25,3 +25,7 @@ docker
   - postgres v13
   - pgadmin v4.27
 ```
+
+### erd
+
+![erd version1](https://github.com/h4ppyy/japanese-hub/blob/master/erd/version1.png?raw=true)
