@@ -10,3 +10,6 @@ SET TIMEZONE='Asia/Seoul';
 mysql이랑 다르게 int auto_increment 의 경우 아래와 같이 선언
 mysql -> id INT PRIMARY KEY AUTO_INCREMENT
 postgre -> id serial PRIMARY KEY
+
+pgadmin 쿼리 실행 단축키
+F5
