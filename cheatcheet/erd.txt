@@ -1,0 +1,97 @@
+# https://app.quickdatabasediagrams.com/
+
+accounts
+-
+id PK INT
+account VARCHAR(255)
+msg VARCHAR(255)
+password VARCHAR(255)
+email VARCHAR(255)
+jlpt INT
+level INT
+deleted BOOLEAN
+created_at TIMESTAMP
+updated_at TIMESTAMP
+deleted_at TIMESTAMP
+
+post
+-
+id PK INT
+title VARCHAR(255)
+link VARCHAR(255)
+user_id INT FK >- accounts.id
+deleted BOOLEAN
+created_at TIMESTAMP
+updated_at TIMESTAMP
+deleted_at TIMESTAMP
+
+post_unit
+-
+id PK INT
+post_id INT FK >- post.id
+kanji VARCHAR(255),
+hiragana VARCHAR(255),
+katakana VARCHAR(255),
+hangul VARCHAR(255),
+english VARCHAR(255),
+user_id INT FK >- accounts.id
+deleted BOOLEAN
+created_at TIMESTAMP
+updated_at TIMESTAMP
+deleted_at TIMESTAMP
+
+problem
+-
+id PK INT
+title VARCHAR(255)
+link VARCHAR(255)
+content VARCHAR(255)
+user_id INT FK >- accounts.id
+deleted BOOLEAN
+created_at TIMESTAMP
+updated_at TIMESTAMP
+deleted_at TIMESTAMP
+
+problem_unit
+-
+id PK INT
+problem_id INT FK >- problem.id
+question VARCHAR(255)
+answer1 VARCHAR(255)
+answer2 VARCHAR(255)
+answer3 VARCHAR(255)
+answer4 VARCHAR(255)
+solution INT
+user_id INT FK >- accounts.id
+deleted BOOLEAN
+created_at TIMESTAMP
+updated_at TIMESTAMP
+deleted_at TIMESTAMP
+
+problem_solve
+-
+id PK INT
+unit_id INT FK >- problem_unit.id
+correct BOOLEAN
+user_id INT FK >- accounts.id
+deleted BOOLEAN
+created_at TIMESTAMP
+updated_at TIMESTAMP
+deleted_at TIMESTAMP
+
+file
+-
+id PK INT
+type VARCHAR(10)
+type_id int FK >- problem.id
+raw_name VARCHAR(255)
+enc_name VARCHAR(255)
+ext VARCHAR(255),
+raw_size INT
+format_size VARCHAR(255)
+save_path VARCHAR(255)
+user_id INT FK >- accounts.id
+deleted BOOLEAN
+created_at TIMESTAMP
+updated_at TIMESTAMP
+deleted_at TIMESTAMP

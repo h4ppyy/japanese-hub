@@ -1,6 +1,9 @@
 전체 테이블 조회
 SELECT * FROM pg_catalog.pg_tables;
 
+public 테이블 조회
+SELECT * FROM pg_catalog.pg_tables where schemaname = 'public';
+
 타임존 UTC to JST
 SET TIMEZONE='Asia/Tokyo';
 
