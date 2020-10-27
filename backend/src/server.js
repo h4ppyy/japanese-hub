@@ -21,28 +21,6 @@ const Account = sequelize.define('account', {
   timestamps: false
 });
 
-const tesingDB = async () => {
-  try {
-    await sequelize.authenticate();
-
-    // const jane = Account.build({ 
-    //   account: "user3",
-    //   msg: "good!!!",
-    //   password: "1234",
-    //   email: "user3@naver.com",
-    //   jlpt: 1
-    // });
-    // await jane.save();
-
-    const users = await Account.findAll();
-    console.log('users => ', users)
-    console.log('Connection has been established successfully.');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
-}
-tesingDB();
-
 const typeDefs = gql`
   scalar Date
 
@@ -52,8 +30,8 @@ const typeDefs = gql`
     msg: String
     password: String
     email: String
-    jlpt: String
-    level: String
+    jlpt: Int
+    level: Int
     deleted: String
     created_at: Date
     updated_at: Date
@@ -61,26 +39,57 @@ const typeDefs = gql`
   }
 
   type Query {
-    hello: String!
     getAccountList: [Account]
     getAccount(id: Int): Account
+  }
+
+  type Mutation {
+    createUser(
+      account: String,
+      msg: String,
+      password: String,
+      email: String,
+      jlpt: Int
+    ): Account
+
+    updateUser(
+      id: ID
+      msg: String,
+      jlpt: Int
+    ): Account
+
+    deleteUser(
+      id: ID
+    ): [Int]
   }
 `;
  
 const resolvers = {
   Query: {
-    hello: () => { 
-      return 'Hello world!'
-    },
     getAccountList: async () => {
-      const result = await Account.findAll({ raw : true })
+      const result = await Account.findAll({ where: { deleted: false }, raw : true })
       return result
     },
     getAccount: async (root, { id }) => {
-      const result = await Account.findOne({ where: { id: id }, raw : true })
+      const result = await Account.findOne({ where: { id: id, deleted: false }, raw : true })
       return result
     }
   },
+  Mutation: {
+    createUser: async (root, param) => {
+      const account = await Account.create(param);
+      return account
+    },
+    updateUser: async (root, param) => {
+      const account = await Account.update(param, { where: { id: param.id } });
+      const result = await Account.findOne({ where: { id: param.id }, raw : true })
+      return result
+    },
+    deleteUser: async (root, { id }) => {
+      const account = await Account.update({ deleted: true }, { where: { id: id, deleted: false } });
+      return account
+    }
+  }
 };
  
 const server = new ApolloServer({ typeDefs, resolvers });
