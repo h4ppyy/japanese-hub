@@ -10,7 +10,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
     volumes:
-      - ./table.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./sql/table.sql:/docker-entrypoint-initdb.d/table.sql
   pgadmin:
     image: dpage/pgadmin4:4.27
     container_name: jhub-pgadmin
