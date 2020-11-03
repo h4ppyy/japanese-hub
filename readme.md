@@ -9,14 +9,12 @@ We read Japanese articles and take notes of unknown kanji
 
 frontend
 ```
-next.js
-apollo-client
+nuxt.js
 ```
 
 backend
 ```
-graphql
-apollo-server
+express.js
 ```
 
 infra
