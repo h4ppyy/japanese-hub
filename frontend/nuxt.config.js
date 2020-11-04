@@ -14,10 +14,13 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '@/assets/sass/_base.sass',
-    '@/assets/sass/main.sass',
-    '@/assets/sass/style.sass',
-    '@/assets/css/bootstrap.min.css'
+    '@/assets/bulma/bulma.sass',
+    '@/assets/fontawesome/scss/brands.scss',
+    '@/assets/fontawesome/scss/fontawesome.scss',
+    '@/assets/fontawesome/scss/regular.scss',
+    '@/assets/fontawesome/scss/solid.scss',
+    '@/assets/fontawesome/scss/v4-shims.scss',
+    '@/assets/sass/main.sass'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
