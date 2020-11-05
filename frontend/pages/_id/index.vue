@@ -1,5 +1,5 @@
 <template>
   <div>
-    index
+    id index
   </div>
 </template>

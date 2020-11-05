@@ -1,5 +1,5 @@
 <template>
   <div>
-    index
+    jlpt
   </div>
 </template>

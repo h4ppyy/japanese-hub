@@ -1,5 +1,5 @@
 <template>
   <div>
-    index
+    activity
   </div>
 </template>

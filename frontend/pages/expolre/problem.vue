@@ -1,5 +1,5 @@
 <template>
   <div>
-    index
+    problem
   </div>
 </template>
