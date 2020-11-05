@@ -14,12 +14,8 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '@/assets/bulma/bulma.sass',
-    '@/assets/fontawesome/scss/brands.scss',
-    '@/assets/fontawesome/scss/fontawesome.scss',
-    '@/assets/fontawesome/scss/regular.scss',
-    '@/assets/fontawesome/scss/solid.scss',
-    '@/assets/fontawesome/scss/v4-shims.scss',
+    '@/assets/bootstrap/bootstrap.min.css',
+    '@/assets/fontawesome/css/all.css',
     '@/assets/sass/main.sass'
   ],
 
