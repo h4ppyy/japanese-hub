@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+      <NuxtLink class="navbar-brand" to="/">
         <img
           src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg"
           width="30"
@@ -11,7 +11,7 @@
           loading="lazy"
         />
         Japanese Hub
-      </a>
+      </NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -36,15 +36,18 @@
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Repository <span class="sr-only">(current)</span>
-            </a>
+            <NuxtLink class="nav-link" to="/me/repository">
+              Repository
+            </NuxtLink>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Problem</a>
+            <NuxtLink class="nav-link" to="/me/problem">
+              Problem
+            </NuxtLink>
           </li>
           
+          <!-- i must to develop for dropdown -->
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -60,10 +63,10 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Repository</a>
               <a class="dropdown-item" href="#">Problem</a>
-              <!-- <div class="dropdown-divider"></div> -->
             </div>
           </li>
 
+          <!-- i must to develop for dropdown -->
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -79,17 +82,20 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Problem Solving Base Ranking</a>
               <a class="dropdown-item" href="#">Activity Base Ranking</a>
-              <!-- <div class="dropdown-divider"></div> -->
             </div>
           </li>
 
           <!-- status is not login -->
           <li class="nav-item">
-            <a class="nav-link" href="#">Sign In</a>
+            <NuxtLink class="nav-link" to="/login">
+              Sign In
+            </NuxtLink>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Sign Up</a>
+            <NuxtLink class="nav-link" to="/join">
+              Sign Up
+            </NuxtLink>
           </li>
 
           <!-- status is login -->
