@@ -1,15 +1,15 @@
 <template>
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white pb-15px pt-15px shadow-sm">
       <NuxtLink class="navbar-brand" to="/">
-        <img
+        <!-- <img
           src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg"
           width="30"
           height="30"
           class="d-inline-block align-top"
           alt=""
           loading="lazy"
-        />
+        /> -->
         Japanese Hub
       </NuxtLink>
       <button
