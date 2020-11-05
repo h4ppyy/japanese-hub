@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="container header-content-gap debug">
+    <Header />
+    <div class="container header-content-gap">
       <Nuxt />
     </div>
   </div>

@@ -3,13 +3,15 @@
     <section class="pd-24px">
       <div class="row">
         <div class="col pt-60px ">
-          <h1>Japanese Hub</h1>
+          <h1 class="mb-24px">Japanese Hub</h1>
           <div>
-            You can save Japanese. Read the saved Japanese repeatedly and memorize them easily
+            You can save Japanese<br>
+            Read the saved Japanese repeatedly and memorize them easily<br>
+            Make a problem and help your friend
           </div>
         </div>
         <div class="col d-none d-md-block ">
-          <img class="img-500x300" src="/img/sample/undraw1.png" />
+          <img class="img-500x300" src="/img/sample/undraw4.png" />
         </div>
       </div>
     </section>
@@ -19,38 +21,38 @@
       <div class="row">
         <div class="col-md pd-30px ">
           <div class="text-center">
-            <img class="img-210x160" src="/img/sample/undraw1.png" />
+            <img class="img-210x160" src="/img/sample/undraw7.png" />
           </div>
-          <h4 class="text-center pd-30px">MODULAR</h4>
+          <h4 class="text-center pd-30px">Everything is free</h4>
           <div class="gray-color">
-            Nuxt is based on a powerful modular architecture. You can choose
-            from more than 50 modules to make your development faster and
-            easier. You don't have to reinvent the wheel to get PWA benefits,
-            add Google Analytics to your page or generate a sitemap.
+            Internet lectures are too expensive. 
+            You need a lot of money if you buy a lot of books.
+            Now we can learn Japanese without worrying about money.
+            Everything in our service is free of charge.
           </div>
         </div>
         <div class="col-md pd-30px ">
           <div class="text-center">
-            <img class="img-210x160" src="/img/sample/undraw2.png" />
+            <img class="img-210x160" src="/img/sample/undraw5.png" />
           </div>
-          <h4 class="text-center pd-30px">MODULAR</h4>
+          <h4 class="text-center pd-30px">For the JLPT</h4>
           <div class="gray-color">
-            Nuxt is based on a powerful modular architecture. You can choose
-            from more than 50 modules to make your development faster and
-            easier. You don't have to reinvent the wheel to get PWA benefits,
-            add Google Analytics to your page or generate a sitemap.
+            It's good to use our service when studying for JLPT.
+            Save words you don't know in repository.
+            Solve other people's problems.
+            You must pass the JLPT.
+            If you pass the JLPT, make some interesting problem and help your friend.
           </div>
         </div>
         <div class="col-md pd-30px ">
           <div class="text-center">
-            <img class="img-210x160" src="/img/sample/undraw3.png" />
+            <img class="img-210x160" src="/img/sample/undraw6.png" />
           </div>
-          <h4 class="text-center pd-30px">MODULAR</h4>
+          <h4 class="text-center pd-30px">To get a job in Japan</h4>
           <div class="gray-color">
-            Nuxt is based on a powerful modular architecture. You can choose
-            from more than 50 modules to make your development faster and
-            easier. You don't have to reinvent the wheel to get PWA benefits,
-            add Google Analytics to your page or generate a sitemap.
+            We are trying to create a community for employment in Japan.
+            Get a lot of information about employment in Japan.
+            Your dream of getting a job in Japan will surely come true.
           </div>
         </div>
       </div>
@@ -64,7 +66,7 @@
             repository
           </div>
           <div class="text-center fz-24px">
-            10,300
+            17,326
           </div>
         </div>
         <div class="col ">
@@ -72,7 +74,7 @@
             problem
           </div>
           <div class="text-center fz-24px">
-            10,300
+            34,124
           </div>
         </div>
         <div class="col ">
@@ -80,10 +82,13 @@
             user
           </div>
           <div class="text-center fz-24px">
-            10,300
+            1,178
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="pd-24px">
     </section>
   </div>
 </template>

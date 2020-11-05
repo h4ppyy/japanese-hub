@@ -1,24 +1,20 @@
 <template>
   <div>
 
-    <div>
-      <img class="img-50x50" src="/img/sample/undraw1.png" />
-    </div>
-
-    <div>change password</div>
+    <h2 class="text-center mb-24px">Change Password</h2>
     
-    <div class="card">
+    <div class="auth-box">
       <div class="card-body">
         <div class="form-group">
-          <label for="exampleInputPassword1">new password</label>
+          <label for="exampleInputPassword1">New Password</label>
           <input
             type="password"
             class="form-control"
-            id="exampleInputPassword1"
+            id="password"
           />
         </div>
         <div>
-          <button class="btn btn-primary">change password</button>
+          <button class="btn btn-success w-100p">Change Password</button>
         </div>
       </div>
     </div>
@@ -28,6 +24,6 @@
 
 <script>
 export default {
-  layout: "empty",
+  layout: "no_footer",
 };
 </script>

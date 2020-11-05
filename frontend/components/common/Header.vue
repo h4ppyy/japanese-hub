@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white pb-15px pt-15px shadow-sm">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white pb-15px pt-15px shadow-sm pl-50px pr-50px">
       <NuxtLink class="navbar-brand" to="/">
         <!-- <img
           src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg"
@@ -99,7 +99,7 @@
           </li>
 
           <!-- status is login -->
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -118,7 +118,8 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Sign Out</a>
             </div>
-          </li>
+          </li> -->
+
         </ul>
       </div>
     </nav>
